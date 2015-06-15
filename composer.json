@@ -1,0 +1,36 @@
+{
+  "name": "slbmeh/composer-solver",
+  "description": "A proof of concept plugin to replace composer internals such as the solver",
+  "license": "MIT",
+  "type": "composer-plugin",
+  "authors": [
+    {
+      "name": "Steve Buzonas",
+      "email": "steve@fancyguy.com"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "Slbmeh\\Composer\\": "src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Slbmeh\\Composer\\Tests\\": "tests/"
+    }
+  },
+  "minimum-stability": "dev",
+  "prefer-stable": true,
+  "require": {
+    "composer-plugin-api": "^1.0"
+  },
+  "require-dev": {
+    "composer/composer": "dev-master"
+  },
+  "extra": {
+    "class": "Slbmeh\\Composer\\SolverPlugin",
+    "branch-alias": {
+      "dev-master": "1.x-dev"
+    }
+  }
+}
